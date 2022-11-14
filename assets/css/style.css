@@ -27,7 +27,7 @@ body {
   margin: auto;
   width: 340px;
   background-color: #fff;
-  border-radius: 2em;
+  border-radius: 1em;
   overflow: hidden;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .card__paragraph {
   color: var(--desaturated-blue);
-  font-size: 1.06em;
+  font-size: .9em;
   line-height: 1.5;
   margin: 1em 0 -1em;
 }
@@ -71,6 +71,7 @@ body {
 }
 
 .card__name {
+  padding-bottom: 4px;
   font-size: 1rem;
   color: var(--dark-blue);
 }
@@ -91,7 +92,7 @@ body {
   text-decoration: none;
   margin-top: 2em;
   border-radius: .5em;
-  padding: 1em;
+  padding: .7em;
   font-weight: 700;
   box-shadow: 0 10px 10px -8px var(--bright-blue);
 }
@@ -103,8 +104,24 @@ body {
   box-shadow: none;
 }
 
+.card__cta--cancel:hover{
+  color: var(--dark-blue);
+}
+
+.card__link:hover {
+  color: hsla(245, 75%, 52%, .7);
+  text-decoration: none;
+}
+
+.card__cta:hover {
+  background-color: hsla(245, 75%, 52%, .7);
+}
+
 @media (min-width:768px) {
   body {
     background-image: url(../images/pattern-background-desktop.svg);
+  }
+  .card {
+    width: 360px;
   }
 }
