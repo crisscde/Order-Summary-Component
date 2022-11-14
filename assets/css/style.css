@@ -1,0 +1,110 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--pale-blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+}
+
+.card {
+  margin: auto;
+  width: 340px;
+  background-color: #fff;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-image: url(/assets/images/illustration-hero.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card__texts {
+  padding: 2.5em 1.7em;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.card__paragraph {
+  color: var(--desaturated-blue);
+  font-size: 1.06em;
+  line-height: 1.5;
+  margin: 1em 0 -1em;
+}
+
+.card__plan {
+  display: flex;
+  background-color: var(--very-pale-blue);
+  padding: 3em 1em 1em;
+  align-items: center;
+}
+
+.card__icon {
+  margin-right: .9em;
+}
+
+.card__name {
+  font-size: 1rem;
+  color: var(--dark-blue);
+}
+
+.card__price {
+  color: var(--desaturated-blue);
+}
+
+.card__link {
+  margin-left: auto;
+  color: var(--bright-blue);
+}
+
+.card__cta {
+  display: block;
+  background-color: var(--bright-blue);
+  color: #fff;
+  text-decoration: none;
+  margin-top: 2em;
+  border-radius: .5em;
+  padding: 1em;
+  font-weight: 700;
+  box-shadow: 0 10px 10px -8px var(--bright-blue);
+}
+
+.card__cta--cancel {
+  margin-top: .7em;
+  background-color: #fff;
+  color: var(--desaturated-blue);
+  box-shadow: none;
+}
+
+@media (min-width:768px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+}
